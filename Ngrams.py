@@ -1,11 +1,10 @@
 #Program that generates sentences based on bigrams
 
-# read in your chosen corpus as a list of words (change the file name if you're using a different corpus)
 import re
 import random
 mydata = open('movies.txt','r').read().split()
 
-# Part 1: Preprocessing
+
 def preprocess(data):
   """function takes in corpus and makes everything lowercase
       and removes punctuation."""
@@ -14,7 +13,7 @@ def preprocess(data):
   #remove all non alphanumeric chars  and empty strings
   return filter(None, [re.sub(r'\W','',x) for x in lower])
 
-# Part 2: Get bigram and unigram counts
+
 
 def get_counts(data):
    """function takes a list of strings
